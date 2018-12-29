@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.322298">
+<testcase classname="User registration" name="Successful name edit" time="0.322298">
+<failure message="java.lang.NullPointerException&#10;&#9;at step_definitions.SignUpSteps.newUserIsCreated(SignUpSteps.java:24)&#10;&#9;at ✽.I have created a new user(src/test/resources/features/blog.feature:9)&#10;"><![CDATA[Given I have created a new user.............................................failed
+
+StackTrace:
+java.lang.NullPointerException
+	at step_definitions.SignUpSteps.newUserIsCreated(SignUpSteps.java:24)
+	at ✽.I have created a new user(src/test/resources/features/blog.feature:9)
+]]></failure>
+</testcase>
+</testsuite>

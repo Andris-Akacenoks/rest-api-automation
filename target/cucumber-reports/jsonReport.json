@@ -1,0 +1,36 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 8,
+        "name": "Successful name edit",
+        "description": "",
+        "id": "user-registration;successful-name-edit",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\n\tat step_definitions.SignUpSteps.newUserIsCreated(SignUpSteps.java:24)\n\tat ✽.I have created a new user(src/test/resources/features/blog.feature:9)\n",
+              "duration": 311727774,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "I have created a new user",
+            "match": {
+              "location": "SignUpSteps.newUserIsCreated()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "User registration",
+    "description": "  As a user, I should be able to register a new user\n  and edit my user details",
+    "id": "user-registration",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/blog.feature",
+    "tags": []
+  }
+]
