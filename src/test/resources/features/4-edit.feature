@@ -1,4 +1,4 @@
-Feature: Blog Post publishing feature
+Feature: Other users Blog Post editing feature
     As a user, I should be able to publish blog posts and perform actions
     with them.
 
