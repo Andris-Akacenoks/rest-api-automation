@@ -7,12 +7,10 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jws.soap.SOAPBinding;
 import javax.ws.rs.core.Response.Status;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import sun.nio.cs.US_ASCII;
 
 import static io.restassured.RestAssured.given;
 
@@ -209,7 +207,7 @@ public class InterestingBlogClient {
                 when().
                     get(endpoint).
                 then().
-                    log().all().
+                    log().ifValidationFails().
                     statusCode(Status.OK.getStatusCode()).
                 extract().
                     response();
@@ -227,7 +225,7 @@ public class InterestingBlogClient {
             when().
                 delete(endpoint).
             then().
-                log().all().
+                log().ifValidationFails().
                 statusCode(Status.NO_CONTENT.getStatusCode()).
             extract().
                 response();
@@ -275,6 +273,6 @@ public class InterestingBlogClient {
 
 
     private void logCallResposeTime(String endpoint, Response response) {
-//        LOGGER.info("Response time for {}: {} ms",endpoint, response.getTime());
+        LOGGER.info("Response time for {}: {} ms",endpoint, response.getTime());
     }
 }

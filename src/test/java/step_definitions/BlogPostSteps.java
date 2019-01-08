@@ -214,13 +214,4 @@ public class BlogPostSteps {
                 .isEqualTo(TestCaseContext.get().getTestUser().fetchFirstPost().getTitle());
 
     }
-
-
-    //    @Then("I check if the title has been changed to {string}")
-    //    public void iCheckIfTheTitleHasBeenChangedTo(String arg0) {
-    //    }
-
-    //    @And("I change title of the newly created blog post to {string}")
-    //    public void iChangeTitleOfTheNewlyCreatedBlogPostTo(String arg0) {
-    //    }
 }

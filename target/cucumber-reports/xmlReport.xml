@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="3.937841">
-<testcase classname="Blog Post publishing feature" name="Edit other users blog post" time="3.937841">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="7.453758">
+<testcase classname="User registration feature" name="Altering profile information" time="4.388917">
+<system-out><![CDATA[Given a new account has been created........................................passed
+And I have logged in with the newly created user............................passed
+When I edit users Firstname as "EditedName" and Lastname to "EditedLastName".passed
+Then Firstname and Lastname are updated to "EditedName" and "EditedLastName" on the server.passed
+When I revert Firstname and Lastname........................................passed
+Then Firstname and Lastname are reverted....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Blog Post publishing feature" name="Create blog post" time="0.910778">
+<system-out><![CDATA[Given a new account has been created........................................passed
+And I have logged in with the newly created user............................passed
+When I create a new log post with title "Here in my garage".................passed
+Then the newly added post is not published..................................passed
+When I publish the newly added post.........................................passed
+Then the new test case is published.........................................passed
+When I delete the newly published blog post.................................passed
+Then the post is deleted and no longer available............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Other users Blog Post deleting feature" name="Delete other users blog post" time="1.109903">
+<system-out><![CDATA[Given a new account has been created........................................passed
+And I have logged in with the newly created user............................passed
+When I create a new log post with title "Here in my garage".................passed
+Then the newly added post is not published..................................passed
+When I publish the newly added post.........................................passed
+When I create a non-authorised profile......................................passed
+And I have logged in with the non-authorised profile........................passed
+When I fetch other users published blog post................................passed
+And I delete the blog post as non-author....................................passed
+Then the post is not deleted................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Blog Post publishing feature" name="Edit other users blog post" time="1.04416">
 <system-out><![CDATA[Given a new account has been created........................................passed
 And I have logged in with the newly created user............................passed
 When I create a new log post with title "Here in my garage".................passed

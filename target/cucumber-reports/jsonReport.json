@@ -3,6 +3,150 @@
     "line": 1,
     "elements": [
       {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3479282600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a new account has been created",
+            "match": {
+              "location": "SignUpSteps.newAccountIsCreated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 182200489,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I have logged in with the newly created user",
+            "match": {
+              "location": "ProfileSteps.logIn()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 442043078,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeAll()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Altering profile information",
+        "description": "",
+        "id": "user-registration-feature;altering-profile-information",
+        "after": [
+          {
+            "result": {
+              "duration": 39651626,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterAll(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 63337194,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I edit users Firstname as \"EditedName\" and Lastname to \"EditedLastName\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EditedName\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"EditedLastName\"",
+                  "offset": 55
+                }
+              ],
+              "location": "ProfileSteps.iEditUsersFirstnameAsAndLastnameTo(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57580437,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Firstname and Lastname are updated to \"EditedName\" and \"EditedLastName\" on the server",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EditedName\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"EditedLastName\"",
+                  "offset": 55
+                }
+              ],
+              "location": "ProfileSteps.firstnameAndLastnameAreUpdatedToAndOnTheServer(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 48457691,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I revert Firstname and Lastname",
+            "match": {
+              "location": "ProfileSteps.iRevertFirstnameAndLastname()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51772500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Firstname and Lastname are reverted",
+            "match": {
+              "location": "ProfileSteps.firstnameAndLastnameAreReverted()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "User registration feature",
+    "description": "    As a user I should be able to create a new account and perform action with it",
+    "id": "user-registration-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/1-user.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
         "line": 5,
         "name": "",
         "description": "",
@@ -11,7 +155,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2575825442,
+              "duration": 187096447,
               "status": "passed"
             },
             "line": 6,
@@ -23,7 +167,339 @@
           },
           {
             "result": {
-              "duration": 189631656,
+              "duration": 155418487,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I have logged in with the newly created user",
+            "match": {
+              "location": "ProfileSteps.logIn()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 234530,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeAll()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Create blog post",
+        "description": "",
+        "id": "blog-post-publishing-feature;create-blog-post",
+        "after": [
+          {
+            "result": {
+              "duration": 67354651,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterAll(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 147166603,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I create a new log post with title \"Here in my garage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Here in my garage",
+                  "offset": 36
+                }
+              ],
+              "location": "BlogPostSteps.createNewBlogPost(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 147047081,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the newly added post is not published",
+            "match": {
+              "location": "BlogPostSteps.checkAddedPost()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 64125415,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I publish the newly added post",
+            "match": {
+              "location": "BlogPostSteps.iPublishTheNewlyAddedPost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 46646609,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the new test case is published",
+            "match": {
+              "location": "BlogPostSteps.itIsAvailableToThePublishedPostList()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35801926,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I delete the newly published blog post",
+            "match": {
+              "location": "BlogPostSteps.iDeleteTheNewlyPublishedBlogPost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 53477011,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the post is deleted and no longer available",
+            "match": {
+              "location": "BlogPostSteps.thePostIsDeletedAndNoLongerAvailable()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Blog Post publishing feature",
+    "description": "    As a user, I should be able to publish blog posts and perform actions\n    with them.",
+    "id": "blog-post-publishing-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/2-publish.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 159794539,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "a new account has been created",
+            "match": {
+              "location": "SignUpSteps.newAccountIsCreated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 151784782,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I have logged in with the newly created user",
+            "match": {
+              "location": "ProfileSteps.logIn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 86856264,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I create a new log post with title \"Here in my garage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Here in my garage",
+                  "offset": 36
+                }
+              ],
+              "location": "BlogPostSteps.createNewBlogPost(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 132410115,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the newly added post is not published",
+            "match": {
+              "location": "BlogPostSteps.checkAddedPost()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 47506704,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I publish the newly added post",
+            "match": {
+              "location": "BlogPostSteps.iPublishTheNewlyAddedPost()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 100207,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeAll()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Delete other users blog post",
+        "description": "",
+        "id": "other-users-blog-post-deleting-feature;delete-other-users-blog-post",
+        "after": [
+          {
+            "result": {
+              "duration": 69886133,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterAll(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 153601776,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I create a non-authorised profile",
+            "match": {
+              "location": "SignUpSteps.iCreateANonAuthorisedProfile()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 153614064,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I have logged in with the non-authorised profile",
+            "match": {
+              "location": "ProfileSteps.iHaveLoggedInWithTheNonAuthorisedProfile()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62012305,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I fetch other users published blog post",
+            "match": {
+              "location": "BlogPostSteps.iFetchOtherUsersPublishedBlogPost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40593314,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I delete the blog post as non-author",
+            "match": {
+              "location": "BlogPostSteps.iDeleteTheBlogPostAsNonAuthor()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42259652,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the post is not deleted",
+            "match": {
+              "location": "BlogPostSteps.thePostIsNotDeleted()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Other users Blog Post deleting feature",
+    "description": "  As a user, I should be able to try deleting other user blog posts.",
+    "id": "other-users-blog-post-deleting-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/3-delete.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 150200793,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "a new account has been created",
+            "match": {
+              "location": "SignUpSteps.newAccountIsCreated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 134000439,
               "status": "passed"
             },
             "line": 7,
@@ -35,7 +511,7 @@
           },
           {
             "result": {
-              "duration": 156865036,
+              "duration": 69339551,
               "status": "passed"
             },
             "line": 8,
@@ -53,7 +529,7 @@
           },
           {
             "result": {
-              "duration": 153204016,
+              "duration": 108932798,
               "status": "passed"
             },
             "line": 9,
@@ -65,7 +541,7 @@
           },
           {
             "result": {
-              "duration": 78349311,
+              "duration": 43805102,
               "status": "passed"
             },
             "line": 10,
@@ -77,7 +553,7 @@
           },
           {
             "result": {
-              "duration": 160913941,
+              "duration": 144539559,
               "status": "passed"
             },
             "line": 11,
@@ -89,7 +565,7 @@
           },
           {
             "result": {
-              "duration": 147916756,
+              "duration": 139255405,
               "status": "passed"
             },
             "line": 12,
@@ -101,7 +577,7 @@
           },
           {
             "result": {
-              "duration": 44143390,
+              "duration": 40129415,
               "status": "passed"
             },
             "line": 13,
@@ -117,7 +593,7 @@
         "before": [
           {
             "result": {
-              "duration": 186071593,
+              "duration": 96887,
               "status": "passed"
             },
             "match": {
@@ -132,7 +608,7 @@
         "after": [
           {
             "result": {
-              "duration": 73294884,
+              "duration": 64643091,
               "status": "passed"
             },
             "match": {
@@ -145,7 +621,7 @@
         "steps": [
           {
             "result": {
-              "duration": 49212054,
+              "duration": 52746346,
               "status": "passed"
             },
             "line": 16,
@@ -157,7 +633,7 @@
           },
           {
             "result": {
-              "duration": 56717988,
+              "duration": 46638336,
               "status": "passed"
             },
             "line": 17,
@@ -169,7 +645,7 @@
           },
           {
             "result": {
-              "duration": 52550903,
+              "duration": 41774886,
               "status": "passed"
             },
             "line": 18,
@@ -186,7 +662,7 @@
     "description": "    As a user, I should be able to publish blog posts and perform actions\n    with them.",
     "id": "blog-post-publishing-feature",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/new/4-edit.feature",
+    "uri": "src/test/resources/features/4-edit.feature",
     "tags": []
   }
 ]
