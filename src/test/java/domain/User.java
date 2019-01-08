@@ -2,6 +2,8 @@ package domain;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +26,28 @@ public class User {
         this.password = password;
     }
 
+    public User(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public User(User another) {
+        this.blogPosts = another.blogPosts;
+        this.email = another.email;
+        this.firstName = another.firstName;
+        this.lastName = another.lastName;
+        this.password = another.password;
+        this.id = another.id;
+        this.email = another.email;
+        this.authToken = another.authToken;
+    }
+
     public BlogPost fetchFirstPost(){
         return this.blogPosts.get(0);
+    }
+
+    public List<BlogPost> getAllBlogPosts(){
+        return this.blogPosts;
     }
 
     public String getFirstName() {
@@ -77,10 +99,6 @@ public class User {
     }
 
     public void addBlogPost(BlogPost blogPost){
-        this.blogPosts.add(blogPost);
-    }
-
-    public void fetchBlogPost(BlogPost blogPost){
         this.blogPosts.add(blogPost);
     }
 

@@ -3,34 +3,190 @@
     "line": 1,
     "elements": [
       {
-        "line": 8,
-        "name": "Successful name edit",
+        "line": 5,
+        "name": "",
         "description": "",
-        "id": "user-registration;successful-name-edit",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2575825442,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "a new account has been created",
+            "match": {
+              "location": "SignUpSteps.newAccountIsCreated()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 189631656,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I have logged in with the newly created user",
+            "match": {
+              "location": "ProfileSteps.logIn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 156865036,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create a new log post with title \"Here in my garage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Here in my garage",
+                  "offset": 36
+                }
+              ],
+              "location": "BlogPostSteps.createNewBlogPost(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 153204016,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the newly added post is not published",
+            "match": {
+              "location": "BlogPostSteps.checkAddedPost()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78349311,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I publish the newly added post",
+            "match": {
+              "location": "BlogPostSteps.iPublishTheNewlyAddedPost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 160913941,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I create a non-authorised profile",
+            "match": {
+              "location": "SignUpSteps.iCreateANonAuthorisedProfile()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 147916756,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I have logged in with the non-authorised profile",
+            "match": {
+              "location": "ProfileSteps.iHaveLoggedInWithTheNonAuthorisedProfile()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44143390,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I fetch other users published blog post",
+            "match": {
+              "location": "BlogPostSteps.iFetchOtherUsersPublishedBlogPost()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 186071593,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeAll()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Edit other users blog post",
+        "description": "",
+        "id": "blog-post-publishing-feature;edit-other-users-blog-post",
+        "after": [
+          {
+            "result": {
+              "duration": 73294884,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterAll(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\n\tat step_definitions.SignUpSteps.newUserIsCreated(SignUpSteps.java:24)\n\tat ✽.I have created a new user(src/test/resources/features/blog.feature:9)\n",
-              "duration": 311727774,
-              "status": "failed"
+              "duration": 49212054,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "I have created a new user",
+            "line": 16,
+            "name": "I try to edit title of blog post as non-authorised user",
             "match": {
-              "location": "SignUpSteps.newUserIsCreated()"
+              "location": "BlogPostSteps.iTryToEditTitleOfBlogPostAsNonAuthorisedUser()"
             },
-            "keyword": "Given "
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56717988,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I try to edit content of blog post as non-authorised user",
+            "match": {
+              "location": "BlogPostSteps.iTryToEditContentOfBlogPostAsNonAuthorisedUser()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52550903,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Content is not changed",
+            "match": {
+              "location": "BlogPostSteps.contentIsNotChanged()"
+            },
+            "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "User registration",
-    "description": "  As a user, I should be able to register a new user\n  and edit my user details",
-    "id": "user-registration",
+    "name": "Blog Post publishing feature",
+    "description": "    As a user, I should be able to publish blog posts and perform actions\n    with them.",
+    "id": "blog-post-publishing-feature",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/blog.feature",
+    "uri": "src/test/resources/features/new/4-edit.feature",
     "tags": []
   }
 ]

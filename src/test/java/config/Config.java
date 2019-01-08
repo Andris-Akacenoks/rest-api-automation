@@ -5,15 +5,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-
-public class Config {
-
+public final class Config {
     private static final String BASE_URL = "api.baseUrl";
-    private static final String USERNAME = "username";
 
     private static Config INSTANCE;
     private final Properties appProps;
-
 
     private Config() throws IOException {
         final String fileName = System.getProperty("env") + ".properties";
@@ -44,10 +40,4 @@ public class Config {
     public String getApiBaseUrl() {
         return appProps.getProperty(BASE_URL);
     }
-
-    public String getUsername() {
-        return appProps.getProperty(USERNAME);
-    }
-
-
 }

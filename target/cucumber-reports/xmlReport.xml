@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.322298">
-<testcase classname="User registration" name="Successful name edit" time="0.322298">
-<failure message="java.lang.NullPointerException&#10;&#9;at step_definitions.SignUpSteps.newUserIsCreated(SignUpSteps.java:24)&#10;&#9;at ✽.I have created a new user(src/test/resources/features/blog.feature:9)&#10;"><![CDATA[Given I have created a new user.............................................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at step_definitions.SignUpSteps.newUserIsCreated(SignUpSteps.java:24)
-	at ✽.I have created a new user(src/test/resources/features/blog.feature:9)
-]]></failure>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="3.937841">
+<testcase classname="Blog Post publishing feature" name="Edit other users blog post" time="3.937841">
+<system-out><![CDATA[Given a new account has been created........................................passed
+And I have logged in with the newly created user............................passed
+When I create a new log post with title "Here in my garage".................passed
+Then the newly added post is not published..................................passed
+When I publish the newly added post.........................................passed
+When I create a non-authorised profile......................................passed
+And I have logged in with the non-authorised profile........................passed
+When I fetch other users published blog post................................passed
+When I try to edit title of blog post as non-authorised user................passed
+And I try to edit content of blog post as non-authorised user...............passed
+Then Content is not changed.................................................passed
+]]></system-out>
 </testcase>
 </testsuite>
