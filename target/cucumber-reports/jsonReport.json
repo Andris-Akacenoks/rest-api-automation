@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3479282600,
+              "duration": 5222566930,
               "status": "passed"
             },
             "line": 5,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 182200489,
+              "duration": 260638105,
               "status": "passed"
             },
             "line": 6,
@@ -39,7 +39,7 @@
         "before": [
           {
             "result": {
-              "duration": 442043078,
+              "duration": 427332374,
               "status": "passed"
             },
             "match": {
@@ -54,7 +54,7 @@
         "after": [
           {
             "result": {
-              "duration": 39651626,
+              "duration": 83737989,
               "status": "passed"
             },
             "match": {
@@ -67,7 +67,7 @@
         "steps": [
           {
             "result": {
-              "duration": 63337194,
+              "duration": 69066999,
               "status": "passed"
             },
             "line": 9,
@@ -89,7 +89,7 @@
           },
           {
             "result": {
-              "duration": 57580437,
+              "duration": 50890847,
               "status": "passed"
             },
             "line": 10,
@@ -111,7 +111,7 @@
           },
           {
             "result": {
-              "duration": 48457691,
+              "duration": 30051787,
               "status": "passed"
             },
             "line": 11,
@@ -123,7 +123,7 @@
           },
           {
             "result": {
-              "duration": 51772500,
+              "duration": 61822884,
               "status": "passed"
             },
             "line": 12,
@@ -155,7 +155,7 @@
         "steps": [
           {
             "result": {
-              "duration": 187096447,
+              "duration": 320840056,
               "status": "passed"
             },
             "line": 6,
@@ -167,7 +167,7 @@
           },
           {
             "result": {
-              "duration": 155418487,
+              "duration": 194452856,
               "status": "passed"
             },
             "line": 7,
@@ -183,7 +183,7 @@
         "before": [
           {
             "result": {
-              "duration": 234530,
+              "duration": 76626,
               "status": "passed"
             },
             "match": {
@@ -198,7 +198,7 @@
         "after": [
           {
             "result": {
-              "duration": 67354651,
+              "duration": 98151830,
               "status": "passed"
             },
             "match": {
@@ -211,7 +211,7 @@
         "steps": [
           {
             "result": {
-              "duration": 147166603,
+              "duration": 187153185,
               "status": "passed"
             },
             "line": 10,
@@ -229,7 +229,7 @@
           },
           {
             "result": {
-              "duration": 147047081,
+              "duration": 201204943,
               "status": "passed"
             },
             "line": 11,
@@ -241,7 +241,7 @@
           },
           {
             "result": {
-              "duration": 64125415,
+              "duration": 94086604,
               "status": "passed"
             },
             "line": 12,
@@ -253,11 +253,11 @@
           },
           {
             "result": {
-              "duration": 46646609,
+              "duration": 46770338,
               "status": "passed"
             },
             "line": 13,
-            "name": "the new test case is published",
+            "name": "the new blog post is published",
             "match": {
               "location": "BlogPostSteps.itIsAvailableToThePublishedPostList()"
             },
@@ -265,7 +265,7 @@
           },
           {
             "result": {
-              "duration": 35801926,
+              "duration": 48921535,
               "status": "passed"
             },
             "line": 14,
@@ -277,7 +277,7 @@
           },
           {
             "result": {
-              "duration": 53477011,
+              "duration": 123662473,
               "status": "passed"
             },
             "line": 15,
@@ -309,7 +309,7 @@
         "steps": [
           {
             "result": {
-              "duration": 159794539,
+              "duration": 190001923,
               "status": "passed"
             },
             "line": 5,
@@ -321,7 +321,7 @@
           },
           {
             "result": {
-              "duration": 151784782,
+              "duration": 151144481,
               "status": "passed"
             },
             "line": 6,
@@ -333,7 +333,7 @@
           },
           {
             "result": {
-              "duration": 86856264,
+              "duration": 76715337,
               "status": "passed"
             },
             "line": 7,
@@ -351,7 +351,7 @@
           },
           {
             "result": {
-              "duration": 132410115,
+              "duration": 122346355,
               "status": "passed"
             },
             "line": 8,
@@ -363,7 +363,7 @@
           },
           {
             "result": {
-              "duration": 47506704,
+              "duration": 217413898,
               "status": "passed"
             },
             "line": 9,
@@ -379,7 +379,7 @@
         "before": [
           {
             "result": {
-              "duration": 100207,
+              "duration": 100592,
               "status": "passed"
             },
             "match": {
@@ -394,7 +394,7 @@
         "after": [
           {
             "result": {
-              "duration": 69886133,
+              "duration": 73868580,
               "status": "passed"
             },
             "match": {
@@ -407,7 +407,7 @@
         "steps": [
           {
             "result": {
-              "duration": 153601776,
+              "duration": 155440252,
               "status": "passed"
             },
             "line": 12,
@@ -419,7 +419,7 @@
           },
           {
             "result": {
-              "duration": 153614064,
+              "duration": 149437703,
               "status": "passed"
             },
             "line": 13,
@@ -431,7 +431,7 @@
           },
           {
             "result": {
-              "duration": 62012305,
+              "duration": 28857492,
               "status": "passed"
             },
             "line": 14,
@@ -443,7 +443,7 @@
           },
           {
             "result": {
-              "duration": 40593314,
+              "duration": 45759416,
               "status": "passed"
             },
             "line": 15,
@@ -455,7 +455,7 @@
           },
           {
             "result": {
-              "duration": 42259652,
+              "duration": 38390718,
               "status": "passed"
             },
             "line": 16,
@@ -469,7 +469,7 @@
       }
     ],
     "name": "Other users Blog Post deleting feature",
-    "description": "  As a user, I should be able to try deleting other user blog posts.",
+    "description": "  As a user, I should not be able to delete blog posts that are not created by other user.",
     "id": "other-users-blog-post-deleting-feature",
     "keyword": "Feature",
     "uri": "src/test/resources/features/3-delete.feature",
@@ -479,7 +479,7 @@
     "line": 1,
     "elements": [
       {
-        "line": 5,
+        "line": 4,
         "name": "",
         "description": "",
         "type": "background",
@@ -487,10 +487,10 @@
         "steps": [
           {
             "result": {
-              "duration": 150200793,
+              "duration": 156612798,
               "status": "passed"
             },
-            "line": 6,
+            "line": 5,
             "name": "a new account has been created",
             "match": {
               "location": "SignUpSteps.newAccountIsCreated()"
@@ -499,10 +499,10 @@
           },
           {
             "result": {
-              "duration": 134000439,
+              "duration": 182701470,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "I have logged in with the newly created user",
             "match": {
               "location": "ProfileSteps.logIn()"
@@ -511,10 +511,10 @@
           },
           {
             "result": {
-              "duration": 69339551,
+              "duration": 86845382,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "I create a new log post with title \"Here in my garage\"",
             "match": {
               "arguments": [
@@ -529,10 +529,10 @@
           },
           {
             "result": {
-              "duration": 108932798,
+              "duration": 86447688,
               "status": "passed"
             },
-            "line": 9,
+            "line": 8,
             "name": "the newly added post is not published",
             "match": {
               "location": "BlogPostSteps.checkAddedPost()"
@@ -541,10 +541,10 @@
           },
           {
             "result": {
-              "duration": 43805102,
+              "duration": 47534605,
               "status": "passed"
             },
-            "line": 10,
+            "line": 9,
             "name": "I publish the newly added post",
             "match": {
               "location": "BlogPostSteps.iPublishTheNewlyAddedPost()"
@@ -553,10 +553,10 @@
           },
           {
             "result": {
-              "duration": 144539559,
+              "duration": 162815130,
               "status": "passed"
             },
-            "line": 11,
+            "line": 10,
             "name": "I create a non-authorised profile",
             "match": {
               "location": "SignUpSteps.iCreateANonAuthorisedProfile()"
@@ -565,10 +565,10 @@
           },
           {
             "result": {
-              "duration": 139255405,
+              "duration": 174659426,
               "status": "passed"
             },
-            "line": 12,
+            "line": 11,
             "name": "I have logged in with the non-authorised profile",
             "match": {
               "location": "ProfileSteps.iHaveLoggedInWithTheNonAuthorisedProfile()"
@@ -577,10 +577,10 @@
           },
           {
             "result": {
-              "duration": 40129415,
+              "duration": 27060108,
               "status": "passed"
             },
-            "line": 13,
+            "line": 12,
             "name": "I fetch other users published blog post",
             "match": {
               "location": "BlogPostSteps.iFetchOtherUsersPublishedBlogPost()"
@@ -593,7 +593,7 @@
         "before": [
           {
             "result": {
-              "duration": 96887,
+              "duration": 60548,
               "status": "passed"
             },
             "match": {
@@ -601,14 +601,14 @@
             }
           }
         ],
-        "line": 15,
+        "line": 14,
         "name": "Edit other users blog post",
         "description": "",
-        "id": "blog-post-publishing-feature;edit-other-users-blog-post",
+        "id": "other-users-blog-post-editing-feature;edit-other-users-blog-post",
         "after": [
           {
             "result": {
-              "duration": 64643091,
+              "duration": 52864706,
               "status": "passed"
             },
             "match": {
@@ -621,10 +621,10 @@
         "steps": [
           {
             "result": {
-              "duration": 52746346,
+              "duration": 24342558,
               "status": "passed"
             },
-            "line": 16,
+            "line": 15,
             "name": "I try to edit title of blog post as non-authorised user",
             "match": {
               "location": "BlogPostSteps.iTryToEditTitleOfBlogPostAsNonAuthorisedUser()"
@@ -633,10 +633,10 @@
           },
           {
             "result": {
-              "duration": 46638336,
+              "duration": 33702031,
               "status": "passed"
             },
-            "line": 17,
+            "line": 16,
             "name": "I try to edit content of blog post as non-authorised user",
             "match": {
               "location": "BlogPostSteps.iTryToEditContentOfBlogPostAsNonAuthorisedUser()"
@@ -645,10 +645,10 @@
           },
           {
             "result": {
-              "duration": 41774886,
+              "duration": 36109403,
               "status": "passed"
             },
-            "line": 18,
+            "line": 17,
             "name": "Content is not changed",
             "match": {
               "location": "BlogPostSteps.contentIsNotChanged()"
@@ -658,9 +658,9 @@
         ]
       }
     ],
-    "name": "Blog Post publishing feature",
-    "description": "    As a user, I should be able to publish blog posts and perform actions\n    with them.",
-    "id": "blog-post-publishing-feature",
+    "name": "Other users Blog Post editing feature",
+    "description": "    As a user, I should not be able to edit blog posts that are not created by other user.",
+    "id": "other-users-blog-post-editing-feature",
     "keyword": "Feature",
     "uri": "src/test/resources/features/4-edit.feature",
     "tags": []

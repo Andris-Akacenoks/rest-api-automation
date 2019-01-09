@@ -66,6 +66,22 @@ public class InterestingBlogClient {
         return response;
     }
 
+    public Response getProfileInfo(User user){
+        String endpoint = BASE_URL + "profile";
+        Response response =
+            given().
+                header("Authorization", user.getAuthToken()).
+            when().
+                get(endpoint).
+            then().
+                log().ifValidationFails().
+                statusCode(Status.OK.getStatusCode()).
+            extract().
+                response();
+
+        logCallResposeTime(endpoint, response);
+        return response;
+    }
 
     public Response editProfileInfo(User user, User editedUser){
         String endpoint = BASE_URL + "profile";

@@ -1,5 +1,5 @@
 Feature: Other users Blog Post deleting feature
-  As a user, I should be able to try deleting other user blog posts.
+  As a user, I should not be able to delete blog posts that are not created by other user.
 
     Background:
         Given a new account has been created

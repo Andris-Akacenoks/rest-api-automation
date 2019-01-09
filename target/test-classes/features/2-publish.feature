@@ -10,6 +10,6 @@ Feature: Blog Post publishing feature
         When I create a new log post with title "Here in my garage"
         Then the newly added post is not published
         When I publish the newly added post
-        Then the new test case is published
+        Then the new blog post is published
         When I delete the newly published blog post
         Then the post is deleted and no longer available
