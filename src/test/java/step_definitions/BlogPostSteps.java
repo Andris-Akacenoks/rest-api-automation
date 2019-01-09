@@ -82,7 +82,7 @@ public class BlogPostSteps {
 
     }
 
-    @Then("the new test case is published")
+    @Then("the new blog post is published")
     public void itIsAvailableToThePublishedPostList() {
         int id = Integer.valueOf(TestCaseContext.get().getTestUser().fetchFirstPost().getId());
         Response response = BLOG_CLIENT.getPostById(id, TestCaseContext.get().getTestUser());

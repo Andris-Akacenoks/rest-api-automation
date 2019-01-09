@@ -1,6 +1,5 @@
 Feature: Other users Blog Post editing feature
-    As a user, I should be able to publish blog posts and perform actions
-    with them.
+    As a user, I should not be able to edit blog posts that are not created by other user.
 
     Background:
         Given a new account has been created

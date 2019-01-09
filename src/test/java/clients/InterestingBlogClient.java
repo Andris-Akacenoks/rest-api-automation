@@ -66,37 +66,21 @@ public class InterestingBlogClient {
         return response;
     }
 
-    public Response getProfileInfo(User user){
+
+    public Response editProfileInfo(User user, User editedUser){
         String endpoint = BASE_URL + "profile";
         Response response =
             given().
                 header("Authorization", user.getAuthToken()).
+                contentType(ContentType.JSON).
+                body(editedUser).
             when().
-                get(endpoint).
+                put(endpoint).
             then().
                 log().ifValidationFails().
                 statusCode(Status.OK.getStatusCode()).
             extract().
                 response();
-
-        logCallResposeTime(endpoint, response);
-        return response;
-    }
-
-    public Response editProfileInfo(User user, User editedUser){
-        String endpoint = BASE_URL + "profile";
-        Response response =
-                given().
-                    header("Authorization", user.getAuthToken()).
-                    contentType(ContentType.JSON).
-                    body(editedUser).
-                when().
-                    put(endpoint).
-                then().
-                    log().ifValidationFails().
-                    statusCode(Status.OK.getStatusCode()).
-                extract().
-                    response();
 
         logCallResposeTime(endpoint, response);
         return response;
@@ -201,16 +185,16 @@ public class InterestingBlogClient {
 
         String endpoint = BASE_URL + "posts?author_id=" + user.getId();
         Response response =
-                given().
-                    log().ifValidationFails().
-                    header("Authorization", nonAuthUser.getAuthToken()).
-                when().
-                    get(endpoint).
-                then().
-                    log().ifValidationFails().
-                    statusCode(Status.OK.getStatusCode()).
-                extract().
-                    response();
+            given().
+                log().ifValidationFails().
+                header("Authorization", nonAuthUser.getAuthToken()).
+            when().
+                get(endpoint).
+            then().
+                log().ifValidationFails().
+                statusCode(Status.OK.getStatusCode()).
+            extract().
+                response();
 
         logCallResposeTime(endpoint, response);
         return response;
@@ -237,16 +221,16 @@ public class InterestingBlogClient {
     public Response deletePostAsUnauthorisedUser(int id, User user){
         String endpoint = BASE_URL + "post?post_id=" + id;
         Response response =
-                given().
-                    log().ifValidationFails().
-                    header("Authorization", user.getAuthToken()).
-                when().
-                    delete(endpoint).
-                then().
-                    log().ifValidationFails().
-                    statusCode(Status.FORBIDDEN.getStatusCode()).
-                extract().
-                    response();
+            given().
+                log().ifValidationFails().
+                header("Authorization", user.getAuthToken()).
+            when().
+                delete(endpoint).
+            then().
+                log().ifValidationFails().
+                statusCode(Status.FORBIDDEN.getStatusCode()).
+            extract().
+                response();
 
         logCallResposeTime(endpoint, response);
         return response;
@@ -255,17 +239,17 @@ public class InterestingBlogClient {
     public Response editPostNotAuthorised(int id, BlogPost postInfo,  User nonAuthUser){
         String endpoint = BASE_URL + "post?post_id=" + id;
         Response response =
-                given().
-                    header("Authorization", nonAuthUser.getAuthToken()).
-                    contentType(ContentType.JSON).
-                    body(postInfo).
-                when().
-                    put(endpoint).
-                then().
-                    log().ifValidationFails().
-                    statusCode(Status.FORBIDDEN.getStatusCode()).
-                extract().
-                    response();
+            given().
+                header("Authorization", nonAuthUser.getAuthToken()).
+                contentType(ContentType.JSON).
+                body(postInfo).
+            when().
+                put(endpoint).
+            then().
+                log().ifValidationFails().
+                statusCode(Status.FORBIDDEN.getStatusCode()).
+            extract().
+                response();
 
         logCallResposeTime(endpoint, response);
         return response;

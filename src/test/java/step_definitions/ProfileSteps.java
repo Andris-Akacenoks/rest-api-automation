@@ -38,29 +38,6 @@ public class ProfileSteps {
                 .isEqualTo(TestCaseContext.get().getTestUser().getId());
 
         TestCaseContext.get().getTestUser().setAuthToken(response.getHeader("Authorization"));
-
-    }
-
-    @When("^I fetch my profile information and validate it$")
-    public void iFetchProfileInformation() {
-        User user = TestCaseContext.get().getTestUser();
-        Response response = BLOG_CLIENT.getProfileInfo(user);
-
-        assertThat(response.getBody().jsonPath().getString("email"))
-                .as("Check if email received from the server is correct.")
-                .isEqualTo(user.getEmail());
-
-        assertThat(response.getBody().jsonPath().getString("firstName"))
-                .as("Check if firstName received from the server is correct.")
-                .isEqualTo(user.getFirstName());
-
-        assertThat(response.getBody().jsonPath().getString("lastName"))
-                .as("Check if lastName received from the server is correct.")
-                .isEqualTo(user.getLastName());
-
-        assertThat(response.getBody().jsonPath().getString("id"))
-                .as("Check if id received from the server is correct.")
-                .isNotEqualTo(null);
     }
 
     @When("I edit users Firstname as {string} and Lastname to {string}")
@@ -71,7 +48,6 @@ public class ProfileSteps {
         Response response = BLOG_CLIENT.editProfileInfo(copyUser, new User (firstName, lastName));
         originalUser.setFirstName(firstName);
         originalUser.setFirstName(lastName);
-
     }
 
     @Then("Firstname and Lastname are updated to {string} and {string} on the server")
